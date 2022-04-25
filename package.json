@@ -19,6 +19,7 @@
   },
   "homepage": "https://github.com/cybozudevnet/devnet-sample-textlint#readme",
   "devDependencies": {
-    "textlint": "^12.1.1"
+    "textlint": "^12.1.1",
+    "textlint-plugin-html": "^0.3.0"
   }
 }
