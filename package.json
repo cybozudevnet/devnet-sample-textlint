@@ -17,5 +17,8 @@
   "bugs": {
     "url": "https://github.com/cybozudevnet/devnet-sample-textlint/issues"
   },
-  "homepage": "https://github.com/cybozudevnet/devnet-sample-textlint#readme"
+  "homepage": "https://github.com/cybozudevnet/devnet-sample-textlint#readme",
+  "devDependencies": {
+    "textlint": "^12.1.1"
+  }
 }
