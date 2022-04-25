@@ -1,0 +1,6 @@
+{
+  "extends": [
+    "github>cybozu/renovate-config",
+    ":prConcurrentLimitNone"
+  ]
+}
