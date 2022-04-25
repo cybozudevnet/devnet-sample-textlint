@@ -1,0 +1,21 @@
+{
+  "name": "devnet-sample-textlint",
+  "version": "0.0.1",
+  "description": "",
+  "main": "index.js",
+  "private": true,
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/cybozudevnet/devnet-sample-textlint.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/cybozudevnet/devnet-sample-textlint/issues"
+  },
+  "homepage": "https://github.com/cybozudevnet/devnet-sample-textlint#readme"
+}
