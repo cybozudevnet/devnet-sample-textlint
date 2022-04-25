@@ -1,0 +1,11 @@
+version: 1
+imports:
+  - ./dict/media/techbooster.yml
+  - ./dict/media/WEB+DB_PRESS.yml
+  - ./dict/term/cybozu.yml
+  - ./dict/term/techword.yml
+  - ./dict/term/javascript.yml
+rules:
+  - expected: ""
+    pattern:  /[\x00-\x08\x0E-\x1F\x7F]+/
+    prh: 不可視の制御コードが混入しています

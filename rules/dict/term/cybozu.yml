@@ -1,0 +1,35 @@
+version: 1
+rules:
+  - expected: Garoon
+    patterns:
+      - /([^.|^/|^"|^-])garoon([^.|^/|^"|^-])/
+      - garon
+      - ガルーン
+      - ガルン
+      - ｶﾞﾙｰﾝ
+  - expected: メールワイズ
+    patterns:
+      - メルワイ
+      - mailwise
+  - expected: cybozu.com 共通管理
+    patterns:
+      - cybozu.com共通管理
+      - cybozu.comにある共通管理
+      - サービスの共通管理
+  - expected: サイボウズ Office
+    patterns:
+      - サイボウズOffice
+      - サイボウズoffice
+      - サイボウズ office
+      - サイボウズ オフィス
+      - サイボウズオフィス
+  - expected: kintone
+    patterns:
+      - Kintone
+      - キントーン
+      - きんとーん
+      - kinotone
+      - kitone
+  - expected: KUNAI
+    patterns:
+      - kunai

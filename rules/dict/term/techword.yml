@@ -1,0 +1,64 @@
+# cybozu で使う技術用語
+version: 1
+rules:
+  - expected: 許可リスト
+    patterns:
+      - ホワイトリスト
+  - expected: 拒否リスト
+    patterns:
+      - ブラックリスト
+  - expected: インストーラー
+    pattern: /インストーラ(?!ー)/
+  - expected: インターフェース
+    pattern:  /インタフェイス|インターフェイス|インタフェース|インターフェィス/
+  - expected: プラットフォーム
+    patterns: プラットホーム
+  - expected: シミュレーション
+    patterns: シュミレーション
+  - expected: ソフトウェア
+    pattern: /ソフトウエア/
+  - expected: モバイル
+    patterns: /スマートフォン|スマートホン/
+  - expected: URL
+    pattern: /\buri\b/i
+  - expected: マスター
+    pattern: /マスタ(?!ー)/
+  - expected: フィルター
+    pattern: /フィルタ(?!ー)/
+  - expected: レイヤー
+    pattern: /レイヤ(?!ー)/
+  - expected: プリンター
+    pattern: /プリンタ(?!ー)/
+  - expected: ヘッダー
+    pattern: /ヘッダ(?!ー)/
+  - expected: フッター
+    pattern: /フッタ(?!ー)/
+  - expected: サーバー
+    pattern: /サーバ(?!ー)/
+  - expected: パラメーター
+    patterns: /パラメタ|パラメータ(?!ー)/
+  - expected: ブラウザー
+    pattern: /ブラウザ(?!ー)/
+  - expected: フォルダー
+    pattern: /フォルダ(?!ー)/
+  - expected: ディレクトリー
+    pattern: /ディレクトリ(?!ー)/
+  - expected: アクセシビリティ
+    pattern: /アクセシビリティー?/
+  - expected: セキュリティ
+    pattern: /セキュリティー?/
+  - expected: タイポグラフィ
+    pattern: /タイポグラフィー?/
+  - expected: クエリ
+    pattern: /クエリー?/
+  - expected: プライバシー
+    pattern: /プライバシィ/
+  - expected: ポリシー
+    pattern: /ポリシィ/
+  - expected: イベントオブジェクト
+    pattern: /event\s*オブジェクト/
+  - expected: ハンドラー
+    pattern:  /ハンドラ(?!ー)/
+  - expected: REST API
+    pattern:  /\brestapi\b|\brest api\b|\bRestAPI\b|\bRESTAPI\b|\bRest API\b/
+

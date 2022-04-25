@@ -1,0 +1,118 @@
+{
+  "plugins": [
+    "html"
+  ],
+  "rules": {
+    // リンク切れがないか確認する
+    "no-dead-link": {
+      "checkRelative": false,
+      "baseURI": null,
+      ignore: [
+        "https://developer.cybozu.io/**",
+        "https://example.cybozu.com/**",
+        "https://sample.cybozu.com/**",
+        "https://www.example.com/**",
+        "https://api.example.com/**"
+      ],
+      "preferGET": [],
+      "ignoreRedirects": false,
+      "retry": 3,
+      "userAgent": "textlint-rule-no-dead-link/1.0",
+      "maxRetryTime": 10
+    },
+    // 全角と半角の間のスペースを必ず入れる
+    "ja-space-between-half-and-full-width": {
+      "space": "always"
+    },
+    // インラインコードの周りにスペースを入れる
+    "ja-space-around-code": true,
+    // 全角同士の間にスペースを入れない
+    "ja-no-space-between-full-width": true,
+    // カタカナ語間は中黒または半角スペースを用いてカタカナ語を区切る
+    "ja-nakaguro-or-halfwidth-space-between-katakana": true,
+    // かっこの外側、内側ともにスペースを入れない
+    "ja-no-space-around-parentheses": true,
+    // 文末に感嘆符があり文が続く場合はその後に全角スペース、文中の場合はスペースを入れない
+    "ja-space-after-exclamation": true,
+    // 文末に疑問符があり文が続く場合はその後に全角スペース、文中の場合はスペースを入れない
+    "ja-space-after-question": true,
+    // 1文の長さは120文字以下とする
+    "sentence-length": {
+      "max": 120
+    },
+    // 読点は1文中に3つまで
+    "max-ten": {
+      "max": 3
+    },
+    // 連続できる最大の漢字長は6文字まで
+    "max-kanji-continuous-len": {
+      "max": 6
+    },
+    // 「ですます調」「である調」を統一する
+    // 見出しは自動
+    // 本文は「ですます」調
+    // 箇条書きは「ですます」調
+    "no-mix-dearu-desumasu": {
+      "preferInHeader": "",
+      "preferInBody": "ですます",
+      "preferInList": "ですます",
+      "strict": true
+    },
+    // 二重否定は使用しない
+    "no-double-negative-ja": true,
+    // ら抜き言葉を使用しない
+    "no-dropping-the-ra": true,
+    // 逆接の接続助詞「が」を連続して使用しない
+    "no-doubled-conjunctive-particle-ga": true,
+    // 同じ接続詞を連続して使用しない
+    "no-doubled-conjunction": true,
+    // 同じ助詞を連続して使用しない
+    "no-doubled-joshi": {
+      "min_interval": 2
+    },
+    // UTF8-MAC 濁点を使用しない
+    "no-nfd": true,
+    // 不必要な制御文字を使用しない
+    "@textlint-rule/no-invalid-control-character": true,
+    // 半角カナを使用しない
+    "no-hankaku-kana": true,
+    // 同一の単語を間違えて連続しているのをチェックする
+    "ja-no-successive-word": true,
+    // よくある日本語の誤用をチェックする
+    "ja-no-abusage": true,
+    // 冗長な表現をチェックする
+    "ja-no-redundant-expression": true,
+    // 入力ミスで発生する不自然なアルファベットをチェックする
+    "ja-unnatural-alphabet": true,
+    // 対になっていない括弧をチェックする
+    "@textlint-rule/no-unmatched-pair": true,
+    // 全角と半角アルファベットを混在させない（半角のみ）
+    "no-mixed-zenkaku-and-hankaku-alphabet": true,
+    "preset-jtf-style": {
+      // 以下は無効化
+      "3.1.1.全角文字と半角文字の間": false,
+    },
+    // リンクの前後に半角スペースを入れる
+    "ja-space-around-link": {
+      "before": true,
+      "after": true
+    },
+    // 見出しにはアンカー ID を付ける
+    "@textlint-rule/require-header-id": true,
+    // 箇条書きは句点で終わらない
+    "period-in-list-item": true,
+    "prh": {
+      "rulePaths" :[
+        "./rules/prh.yml"
+      ]
+    }
+  },
+    "filters": {
+    "allowlist": {
+      "allowlistConfigPaths": [
+        "./rules/allow.yml"
+      ]
+    },
+    "comments": true
+  }
+}
