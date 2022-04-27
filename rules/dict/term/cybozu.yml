@@ -1,4 +1,7 @@
 version: 1
+meta:
+  - title: サイボウズ製品の用語
+
 rules:
   - expected: Garoon
     patterns:

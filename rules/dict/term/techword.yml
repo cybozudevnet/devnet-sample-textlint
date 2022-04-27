@@ -1,4 +1,5 @@
-# cybozu で使う技術用語
+meta:
+  - title: サイボウズで使う技術用語
 version: 1
 rules:
   - expected: 許可リスト
