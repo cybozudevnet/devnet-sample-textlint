@@ -33,6 +33,13 @@ rules:
       - きんとーん
       - kinotone
       - kitone
+      - kinotne
   - expected: KUNAI
     patterns:
       - kunai
+  - expected: 許可リスト
+    patterns:
+      - ホワイトリスト
+  - expected: 拒否リスト
+    patterns:
+      - ブラックリスト

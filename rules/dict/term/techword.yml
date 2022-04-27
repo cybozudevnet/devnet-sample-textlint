@@ -1,49 +1,73 @@
 meta:
   - title: サイボウズで使う技術用語
 version: 1
+
 rules:
-  - expected: 許可リスト
-    patterns:
-      - ホワイトリスト
-  - expected: 拒否リスト
-    patterns:
-      - ブラックリスト
-  - expected: インストーラー
-    pattern: /インストーラ(?!ー)/
+  # サイボウズの用語
+  - expected: イベントオブジェクト
+    pattern: /event\s*オブジェクト/
+  - expected: ハンドラー
+    pattern:  /ハンドラ(?!ー)/
+  - expected: モバイル
+    patterns: /スマートフォン|スマートホン/
+    prh: サイボウズでは「モバイル」を使います
+  - expected: URL
+    pattern: /\buri\b/i
+    prh: 「URI」はわかりづらいので、「URL」を使います
+
+  # よくあるタイポ
   - expected: インターフェース
     pattern:  /インタフェイス|インターフェイス|インタフェース|インターフェィス/
   - expected: プラットフォーム
     patterns: プラットホーム
   - expected: シミュレーション
     patterns: シュミレーション
+
+  # 小文字
   - expected: ソフトウェア
     pattern: /ソフトウエア/
-  - expected: モバイル
-    patterns: /スマートフォン|スマートホン/
-  - expected: URL
-    pattern: /\buri\b/i
+
+  # 長音をつける
+  - expected: インストーラー
+    pattern: /インストーラ(?!ー)/
+    prh: 語尾が -er, -or, -ar で終わる語彙には長音を付けます
+  - expected: エクスプローラー
+    pattern: /エクスプローラ(?!ー)/
+    prh: 語尾が -er, -or, -ar で終わる語彙には長音を付けます
   - expected: マスター
     pattern: /マスタ(?!ー)/
+    prh: 語尾が -er, -or, -ar で終わる語彙には長音を付けます
   - expected: フィルター
     pattern: /フィルタ(?!ー)/
+    prh: 語尾が -er, -or, -ar で終わる語彙には長音を付けます
   - expected: レイヤー
     pattern: /レイヤ(?!ー)/
+    prh: 語尾が -er, -or, -ar で終わる語彙には長音を付けます
   - expected: プリンター
     pattern: /プリンタ(?!ー)/
+    prh: 語尾が -er, -or, -ar で終わる語彙には長音を付けます
   - expected: ヘッダー
     pattern: /ヘッダ(?!ー)/
+    prh: 語尾が -er, -or, -ar で終わる語彙には長音を付けます
   - expected: フッター
     pattern: /フッタ(?!ー)/
+    prh: 語尾が -er, -or, -ar で終わる語彙には長音を付けます
   - expected: サーバー
     pattern: /サーバ(?!ー)/
+    prh: 語尾が -er, -or, -ar で終わる語彙には長音を付けます
   - expected: パラメーター
     patterns: /パラメタ|パラメータ(?!ー)/
+    prh: 語尾が -er, -or, -ar で終わる語彙には長音を付けます
   - expected: ブラウザー
     pattern: /ブラウザ(?!ー)/
+    prh: 語尾が -er, -or, -ar で終わる語彙には長音を付けます
   - expected: フォルダー
     pattern: /フォルダ(?!ー)/
+    prh: 語尾が -er, -or, -ar で終わる語彙には長音を付けます
   - expected: ディレクトリー
     pattern: /ディレクトリ(?!ー)/
+
+  # 不要な長音
   - expected: アクセシビリティ
     pattern: /アクセシビリティー?/
   - expected: セキュリティ
@@ -56,10 +80,7 @@ rules:
     pattern: /プライバシィ/
   - expected: ポリシー
     pattern: /ポリシィ/
-  - expected: イベントオブジェクト
-    pattern: /event\s*オブジェクト/
-  - expected: ハンドラー
-    pattern:  /ハンドラ(?!ー)/
+
+  # 大文字小文字の揺れ
   - expected: REST API
     pattern:  /\brestapi\b|\brest api\b|\bRestAPI\b|\bRESTAPI\b|\bRest API\b/
-
