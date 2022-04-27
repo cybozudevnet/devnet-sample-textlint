@@ -5,6 +5,8 @@
   "main": "index.js",
   "private": true,
   "scripts": {
+    "lint": "textlint content/article.html",
+    "fix": "npm run lint -- --fix",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
