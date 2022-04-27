@@ -23,15 +23,15 @@ git clone https://github.com/cybozudevnet/devnet-sample-textlint.git
 
 1. 表示される HTML をクリップボードにコピーします
 
-1. `content/article.html`の内容を、クリップボードの内容で差し替えます
+1. `content/article.html`の内容を、クリップボードの内容に差し替えます
 
-1. クローンしたリポジトリのディレクトリーで、次のコマンドを実行します。
+1. クローンしたリポジトリのディレクトリーで、次のコマンドを実行します
 
     ```shell
     npm install
     ```
 
-1. 次のコマンドで、textlint を実行します。
+1. 次のコマンドで、textlint を実行します
 
     ```shell
     npm run lint
@@ -40,7 +40,7 @@ git clone https://github.com/cybozudevnet/devnet-sample-textlint.git
 1. textlint の実行結果に応じて、対応します
 
     **textlint のチェック項目に違反する表現がない場合**  
-    次のように、指摘された箇所が出力されない場合には、対応の必要はありません。
+    次のように、指摘された箇所が出力されない場合には、対応する必要はありません。
 
     ```shell
     npm run lint
@@ -75,7 +75,8 @@ git clone https://github.com/cybozudevnet/devnet-sample-textlint.git
 
 - [自動で修正できる場合](#fix-auto)  
   指摘された箇所に「✓」が表示される場合には、自動で修正できます
-- [手動で修正する場合](#fix-manually)
+- [手動で修正する場合](#fix-manually)  
+  指摘された箇所に「✓」が表示されない場合には、表現を見直して自分で修正します
 
 ### 自動で修正できる場合 {#fix-auto}
 
@@ -106,7 +107,8 @@ git clone https://github.com/cybozudevnet/devnet-sample-textlint.git
     ✔ Fixed 1 problem
     ```
 
-1. 次のコマンドを実行して、チェック項目に違反する表現がなくなるまで、自動または手動の修正作業を繰り返します
+1. 次のコマンドを実行します  
+   チェック項目に違反する表現がなくなるまで、[自動](#fix-auto)または[手動](#fix-manually)の修正作業を繰り返します
 
     ```shell
     npm run lint
@@ -122,11 +124,13 @@ git clone https://github.com/cybozudevnet/devnet-sample-textlint.git
 ```
 
 上記の例の場合は、4 行目の文で、2 回以上「が」が出現していることを指摘されています。  
-表現を見直して、指摘されないように修正します。
 
-修正したら、次のコマンドを実行します。  
-チェック項目に違反する表現がなくなるまで、自動または手動の修正作業を繰り返します。、チェック項目に違反する表現が残っていないことを確認します。
+1. 指摘されている箇所の表現を見直して、指摘されないように修正します
+
+1. 修正したら、次のコマンドを実行します  
+   チェック項目に違反する表現がなくなるまで、[自動](#fix-auto)または[手動](#fix-manually)の修正作業を繰り返します
 
     ```shell
     npm run lint
     ```
+
