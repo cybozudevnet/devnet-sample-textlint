@@ -25,7 +25,15 @@ git clone https://github.com/cybozudevnet/devnet-sample-textlint.git
 
 1. `content/article.html`の内容を、クリップボードの内容に差し替えます
 
-1. クローンしたリポジトリのディレクトリーで、次のコマンドを実行します
+1. クローンしたリポジトリのディレクトリーで、次のコマンドを実行します  
+  クローンしたリポジトリを最新にします  
+
+    ```shell
+    git fetch --prune
+    git reset --hard origin/main
+    ```
+
+1. 次のコマンドを実行し、モジュールをインストールします
 
     ```shell
     npm install
