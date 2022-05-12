@@ -52,7 +52,7 @@ git clone https://github.com/cybozudevnet/devnet-sample-textlint.git
     **textlint のチェック項目に違反する表現がある場合**  
     実行結果に、「✖ n problem」のように指摘数が表示されます。  
     指摘された箇所を修正してください。  
-    修正方法の詳細は、[textlint で指摘された箇所の対応方法](#fix) を参照してください。
+    修正方法の詳細は、[textlint で指摘された箇所の対応方法](#textlint-で指摘された箇所の対応方法) を参照してください。
 
     ```shell
     npm run lint
@@ -69,16 +69,16 @@ git clone https://github.com/cybozudevnet/devnet-sample-textlint.git
     ✓ 1 fixable problem.
     ```
 
-## textlint で指摘された箇所の対応方法 {#fix}
+## textlint で指摘された箇所の対応方法
 
 指摘の内容によって、対応方法が異なります。
 
-- [自動で修正できる場合](#fix-auto)  
+- [自動で修正できる場合](#自動で修正できる場合)  
   指摘された箇所に「✓」が表示される場合には、自動で修正できます
-- [手動で修正する場合](#fix-manually)  
+- [手動で修正する場合](#手動で修正する場合)  
   指摘された箇所に「✓」が表示されない場合には、表現を見直して自分で修正します
 
-### 自動で修正できる場合 {#fix-auto}
+### 自動で修正できる場合
 
 次のように、「✓」がついている指摘箇所は、fix コマンドで修正できます。
 
@@ -114,7 +114,7 @@ git clone https://github.com/cybozudevnet/devnet-sample-textlint.git
     npm run lint
     ```
 
-### 手動で修正する場合 {#fix-manually}
+### 手動で修正する場合
 
 次のように、「✓」がついてない指摘箇所は、指摘の内容を確認して、手動で修正します。
 
