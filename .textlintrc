@@ -25,7 +25,10 @@
       "space": "always"
     },
     // インラインコードの周りにスペースを入れる
-    "ja-space-around-code": true,
+    "ja-space-around-code": {
+      "before": true,
+      "after": true
+    },
     // 全角同士の間にスペースを入れない
     "ja-no-space-between-full-width": true,
     // カタカナ語間は中黒または半角スペースを用いてカタカナ語を区切る
