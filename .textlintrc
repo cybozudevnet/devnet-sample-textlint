@@ -99,6 +99,10 @@
     },
     // 見出しにはアンカー ID を付ける
     "@textlint-rule/require-header-id": true,
+    // 必ず句点で終わる
+    "ja-no-mixed-period": {
+      allowPeriodMarks: ["}", "！", "なし"]
+    },
     // 箇条書きは句点で終わらない
     "period-in-list-item": true,
     "prh": {
