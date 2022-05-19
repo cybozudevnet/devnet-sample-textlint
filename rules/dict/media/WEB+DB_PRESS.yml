@@ -666,8 +666,8 @@ rules:
     expected: なにがしか
   - pattern: /成り?済ま?([さしすせそ])|成り?すま([さしすせそ])/
     expected: なりすま$1
-  - pattern: なので、
-    expected: ですので、
+  # - pattern: なので、
+  #   expected: ですので、
   - pattern: 何となく
     expected: なんとなく
   - pattern: /に当た([っらりるれろ])/
@@ -1249,8 +1249,8 @@ rules:
     expected: 捨て$1
   - pattern: 成功を納め
     expected: 成功を収め
-  - pattern: /おわ([らりるれろっ][^か])/
-    expected: 終わ$1
+  # - pattern: /おわ([らりるれろっ][^か])/
+  #  expected: 終わ$1
   # - pattern: /終([らりるれろっ])/
   #   expected: 終わ$1
   - pattern: /集([らりるれろっ])/
