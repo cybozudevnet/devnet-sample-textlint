@@ -112,6 +112,19 @@
       "rulePaths" :[
         "./rules/prh.yml"
       ]
+     },
+     // ルールに一致しない文字列を検知する
+     "@textlint-rule/pattern": {
+       "patterns": [
+         {
+           "message": "cybozu.comのドメインは、sample.cybozu.com にしてください",
+           "pattern": "/(?<!sample)\.cybozu\.com/i"
+         },
+         {
+           "message": "メールアドレスのドメインは @example.com にしてください",
+           "pattern": "/([a-zA-Z0-9_.+-]+)@(?!example\.com)/i"
+         },
+       ]
     }
   },
     "filters": {
