@@ -1,1 +1,8 @@
 - /\{#[\x20-\x7E]+\}/
+- /{{.+?}}/
+- /「Bearer 」/
+- /「Basic 」/
+- /最大入力文字数/
+- /KintoneRestAPIClient/
+- /`.*`{1} \[(GET|POST|PUT|PATCH|DELETE)]/
+- /kintone（キントーン）/

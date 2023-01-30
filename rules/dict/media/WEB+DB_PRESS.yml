@@ -609,8 +609,11 @@ rules:
     expected: でき
   - pattern: するようになります
     expected: します
-  - pattern: るようになります
-    expected: ます
+  # - pattern: るようになります
+  #   expected: ます
+  - expected: ます
+    pattern:
+      - /(?<!され)るようになります/
   - pattern: て欲し
     expected: てほし
   - pattern: で欲し
@@ -716,8 +719,8 @@ rules:
     expected: ふせん
   - pattern: 殆ど
     expected: ほとんど
-  - pattern: 正に
-    expected: まさに
+  # - pattern: 正に
+  #   expected: まさに
   - pattern:
       - 益々
       - 増々
@@ -995,7 +998,7 @@ rules:
     expected: やむを得
   - pattern: すこし
     expected: 少し
-  - pattern: /すくな(?!り|る)/
+  - pattern: /すくな(?!り|る|っ)/
     expected: 少な
     specs:
       - from: すくなく
@@ -1099,8 +1102,8 @@ rules:
     expected: のちほど
   - pattern: うしろ
     expected: 後ろ
-  - pattern: 同士
-    expected: どうし
+#  - pattern: 同士
+#    expected: どうし
   - pattern:
       - 頭が堅
       - 頭が硬
@@ -1413,8 +1416,8 @@ rules:
     expected: 連な$1
   - pattern: はさまざま
     expected: はさまざま
-  - pattern: /はさ([まみむめもん])/
-    expected: 挟$1
+  # - pattern: /はさ([まみむめもん])/
+  #   expected: 挟$1
   - pattern: おそれ
     expected: 恐れ
   - pattern: /([^っ])さきに/
@@ -1433,12 +1436,12 @@ rules:
     expected: が経$1
   - pattern: /うめ([たつて])/
     expected: 埋め$1
-  - pattern:
-      - おすすめ
-      - お薦め
-      - お奨め
-      - オススメ
-    expected: お勧め
+  # - pattern:
+  #     - おすすめ
+  #     - お薦め
+  #     - お奨め
+  #     - オススメ
+  #   expected: お勧め
   - pattern:
       - てがけ
       - 手掛け
@@ -1463,7 +1466,7 @@ rules:
     expected: 必要
   - pattern: /あたえ([たつてらりるれろっ])/
     expected: 与え$1
-  - pattern: /すす([まみむめもん])/
+  - pattern: /(?<!お)すす([まみむめもん])/
     expected: 進$1
   - pattern: 焦点をあて
     expected: 焦点を当て
@@ -2043,7 +2046,7 @@ rules:
   # - expected: フッタ
   #   pattern:  /フッター|フッダ/
   - expected: プロキシ
-    pattern:  /プロクシ|プロクシー|プロキシー|\bProxy\b|\bproxy\b/
+    pattern:  /プロクシ|プロクシー|プロキシー/
   # - expected: ブログ
   #   pattern: /(?![^/])(?:blog|Blog)(?![^/])/
   #   specs:
@@ -3015,8 +3018,8 @@ rules:
   - expected: て
     pattern:  /(当)?てて/
     regexpMustEmpty: $1
-  - expected: で
-    pattern:  /でで/
+  # - expected: で
+  #   pattern:  /でで/
   - expected: $1の
     pattern:  /([^も])のの/
   - expected: は

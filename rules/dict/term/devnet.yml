@@ -1,0 +1,43 @@
+version: 1
+meta:
+  - title: devnetで定めた書き方の定義
+
+rules:
+  - expected: "【$1】"
+    patterns:
+      - /【(.+?)】ボタン/
+    specs:
+      - from: "【OK】ボタン"
+        to: "【OK】"
+      - from: "【NG】【OK】ボタン"
+        to: "【NG】【OK】"
+      - from: "【NG】ボタン【OK】ボタン"
+        to: "【NG】【OK】"
+  - expected: イベントオブジェクト
+    patterns:
+      - /event\s*オブジェクト/
+  - expected: モバイル
+    patterns:
+      - /スマートフォン|スマートホン/
+      - /\bMobile\b/
+    specs:
+      - from: スマートフォン
+        to:   モバイル
+      - from: スマートホン
+        to:   モバイル
+      - from: Mobile
+        to:   モバイル
+      - from: mobile
+        to:   mobile
+      - from: MobilePhone
+        to:   MobilePhone
+    prh: サイボウズでは「モバイル」を使います
+  - expected: URL
+    patterns: /\buri\b/i
+    prh: 「URI」はわかりづらいので、「URL」を使います
+  - expected: おすすめ
+    pattern:
+    - お勧め
+    - お薦め
+    - お奨め
+    - オススメ

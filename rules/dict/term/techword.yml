@@ -1,20 +1,8 @@
 meta:
-  - title: サイボウズで使う技術用語
+  - title: 一般的な表記
 version: 1
 
 rules:
-  # サイボウズの用語
-  - expected: イベントオブジェクト
-    pattern: /event\s*オブジェクト/
-  - expected: ハンドラー
-    pattern:  /ハンドラ(?!ー)/
-  - expected: モバイル
-    patterns: /スマートフォン|スマートホン/
-    prh: サイボウズでは「モバイル」を使います
-  - expected: URL
-    pattern: /\buri\b/i
-    prh: 「URI」はわかりづらいので、「URL」を使います
-
   # よくあるタイポ
   - expected: インターフェース
     pattern:  /インタフェイス|インターフェイス|インタフェース|インターフェィス/
@@ -66,6 +54,10 @@ rules:
     prh: 語尾が -er, -or, -ar で終わる語彙には長音を付けます
   - expected: ディレクトリー
     pattern: /ディレクトリ(?!ー)/
+  - expected: ハンドラー
+    patterns:
+      - /ハンドラ(?!ー)/
+    prh: 語尾が -er, -or, -ar で終わる語彙には長音を付けます
 
   # 不要な長音
   - expected: アクセシビリティ

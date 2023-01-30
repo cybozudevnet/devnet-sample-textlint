@@ -43,3 +43,11 @@ rules:
   - expected: 拒否リスト
     patterns:
       - ブラックリスト
+  - expected: 在席
+    patterns:
+      - 在籍
+  - expected: 2要素認証
+    patterns:
+      - 二要素認証
+      - 2段階認証
+      - 二段階認証
