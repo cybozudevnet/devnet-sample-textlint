@@ -10,3 +10,9 @@ rules:
   - expected: ""
     pattern:  /[\x00-\x08\x0E-\x1F\x7F]+/
     prh: 不可視の制御コードが混入しています
+  - expected: " "
+    pattern:  /[\u3000]+/
+    prh: 全角スペースが混入しています
+  - expected: " "
+    pattern:  /[\u00A0]+/
+    prh: no-break space が混入しています
