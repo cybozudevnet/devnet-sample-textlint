@@ -5,6 +5,7 @@ imports:
   - ./dict/term/cybozu.yml
   - ./dict/term/techword.yml
   - ./dict/term/javascript.yml
+  - ./dict/term/devnet.yml
   - ./dict/redundancy.yml
 rules:
   - expected: ""
