@@ -55,7 +55,7 @@
     "textlint-rule-no-mixed-zenkaku-and-hankaku-alphabet": "^1.0.1",
     "textlint-rule-no-nfd": "^2.0.1",
     "textlint-rule-period-in-list-item": "^1.0.1",
-    "textlint-rule-preset-jtf-style": "^2.3.13",
+    "textlint-rule-preset-jtf-style": "^2.3.14",
     "textlint-rule-prh": "^5.3.0",
     "textlint-rule-sentence-length": "^4.0.2"
   }
